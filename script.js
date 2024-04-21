@@ -7,14 +7,7 @@ const endPoints = [
 			{name: 'exkavator.ru', url: 'https://exkavator.ru/'},
             {name: 'b.exkavator.ru', url: 'https://b.exkavator.ru/del/asjs.php'},
             {name: 'my.exkavator.ru', url: 'https://my.exkavator.ru/'},
-            {name: 'corp.exkavator.ru', url: 'https://corp.exkavator.ru/'},
             {name: 'forum.exkavator.ru', url: 'https://forum.exkavator.ru/'},
-		],
-	},
-	{
-		name: 'MAIN-http',
-		data: [
-			{name: 'exkavator.ru', url: 'http://exkavator.ru/'},
 		],
 	},
 	{
@@ -208,8 +201,8 @@ createContent('Time', fullTime, col4);
 const speedBlock = document.createElement('div');
 speedBlock.classList.add('speed-block-item', 'loading');
 createContent('Speed', speedBlock, smallContainerSecond);
-const urlSpeedTest = `http://tilda.ws/testspeedfileajax/?${randomValue}`;
-const urlSizeMegabites = 168;
+const urlSpeedTest = `http://check.exkavator.ru/speed.bin?${randomValue}`;
+const urlSizeMegabites = 21;
 
 function getSpeed(url, size) {
 	const start = Date.now();
