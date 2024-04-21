@@ -202,21 +202,27 @@ const speedBlock = document.createElement('div');
 speedBlock.classList.add('speed-block-item', 'loading');
 createContent('Speed', speedBlock, smallContainerSecond);
 const urlSpeedTest = `http://check.exkavator.ru/speed.bin?${randomValue}`;
-const urlSizeMegabites = 21;
+const urlSize = 20971520;
 
 function getSpeed(url, size) {
 	const start = Date.now();
 	fetch(url)
 		.then((resp) => resp.text())
 		.then((data) => {
-			const time = (Date.now() - start) / 1e3;
+			const time = (Date.now() - start) / 1000;
 			const speed = size / time;
+
+			const bitsLoaded = size * 8;
+			const speedBps = (bitsLoaded / duration).toFixed(2);
+			const speedKbps = (speedBps / 1024).toFixed(2);
+			const speedMbps = (speedKbps / 1024).toFixed(2);
+
 			speedBlock.classList.remove('loading');
-			speedBlock.textContent = speed.toFixed(2) + ' Mbit/s';
+			speedBlock.textContent = speedMbps + ' Mbit/s';
 		});
 }
 
-getSpeed(urlSpeedTest, urlSizeMegabites);
+getSpeed(urlSpeedTest, urlSize);
 
 const metaTag = document.createElement('meta');
 metaTag.setAttribute('name', 'viewport');
