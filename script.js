@@ -5,7 +5,7 @@ const endPoints = [
 		name: 'MAIN-https',
 		data: [
 			{name: 'exkavator.ru', url: 'https://exkavator.ru/'},
-            {name: 'b.exkavator.ru', url: 'https://b.exkavator.ru/'},
+            {name: 'b.exkavator.ru', url: 'https://b.exkavator.ru/del/asjs.php'},
             {name: 'my.exkavator.ru', url: 'https://my.exkavator.ru/'},
             {name: 'corp.exkavator.ru', url: 'https://corp.exkavator.ru/'},
             {name: 'forum.exkavator.ru', url: 'https://forum.exkavator.ru/'},
@@ -20,8 +20,7 @@ const endPoints = [
 	{
 		name: 'CDN',
 		data: [
-            {name: 'cdnb.exkavator.ru',url: 'https://cdnb.exkavator.ru/',},
-			{name: 'cdnba.exkavator.ru',url: 'https://cdnba.exkavator.ru/',},
+			{name: 'cdnba.exkavator.ru',url: 'https://cdnba.exkavator.ru/monit.txt',},
 		],
 	},
 	{
