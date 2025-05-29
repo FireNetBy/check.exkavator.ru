@@ -201,7 +201,7 @@ createContent('Time', fullTime, col4);
 const speedBlock = document.createElement('div');
 speedBlock.classList.add('speed-block-item', 'loading');
 createContent('Speed', speedBlock, smallContainerSecond);
-const urlSpeedTest = `http://check.exkavator.ru/speed.bin?${randomValue}`;
+const urlSpeedTest = `https://check.exkavator.ru/speed.bin?${randomValue}`;
 const urlSize = 20971520;
 
 function getSpeed(url, size) {
